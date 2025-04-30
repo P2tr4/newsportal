@@ -2,7 +2,7 @@
 
 class Controller {
 
-    public static function StartSite(){
+    public static function StartSite() {
         $arr = News::getLast10News();
         include_once 'view/start.php';
     }
@@ -21,20 +21,19 @@ class Controller {
         $arr = News::getNewsByCategoryID($id);
         include_once 'view/catnews.php';
     }
-
     public static function NewsByID($id) {
         $n = News::getNewsByID($id);
         include_once 'view/readnews.php';
     }
 
-    public static function error404() {
-        include_once 'view/error404.php';
+        public static function error404() {
+            include_once 'view/error404.php';
     }
 
-    public static function InsertComment($c, $id) {
-        Comments::InsertComment($c, $id);
-        //self::NewsByID($id);
-        header('Location:news?id='.$id.'#ctable');
+    public static function InsertComment ($c,$id) {
+    Comments::InsertComment($c,$id);
+    //self:NewsByID($id);
+    header('Location:news?id='.$id.'#ctable');
     }
 
     public static function Comments($newsid) {
@@ -42,16 +41,26 @@ class Controller {
         ViewComments::CommentsByNews($arr);
     }
 
-    public static function CommentsCount($newsid) {
+    public static function CommentsCount($newsid){
         $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::CommentsCount($arr);
     }
 
-    public static function CommentsCountWithAncor($newsid) {
+    public static function CommentsCountWithAncor($newsid){
         $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::CommentsCountWithAncor($arr);
     }
 
-}
 
-?>
+    public static function registerForm()
+    {
+        include_once('view/formRegister.php');
+    }
+    public static function registerUser()
+    {
+        $result = Register::registerUser();
+
+        include_once('view/answerRegister.php');
+    }
+
+}

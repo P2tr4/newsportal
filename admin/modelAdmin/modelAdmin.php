@@ -1,6 +1,5 @@
 <?php
 class modelAdmin{
-// АВТОРИЗАЦИЯ АДМИНА
     public static function userAuthentication()
     {
         if (isset($_SESSION['sessionId'])){
