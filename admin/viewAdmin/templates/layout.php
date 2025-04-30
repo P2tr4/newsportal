@@ -3,14 +3,15 @@
         <title>Dashboard</title>
         <link href="public/css/bootstrap.css" rel="stylesheet">
         <link href="public/css/mystyle.css" rel="stylesheet">
- <link rel="stylesheet" href="public/css/font-awesome.min.css">
-
+<!-- Font Awesome --> <link rel="stylesheet" href="public/css/font-awesome.min.css">
+<!-- SCRIPT -->
         <script src="public/js/jquery.min.js"></script>
         <script src="public/js/bootstrap.min.js"></script>
         <sctipt type="text/javascript" src="public/js/ajaxupload.3.5.js"></script>
     </head>
     <body>
         <div class="container">
+<!-- -->
         <?php
             if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"]))
             {

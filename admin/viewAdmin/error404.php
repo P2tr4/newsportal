@@ -1,10 +1,11 @@
 <?php ob_start() ?>
-<h2>404 Ошибка</h2>
+<h2>404 ошибка </h2>
 <article>
 
-    <h3>404 ошибка - это что такое?</h3>
-<p>По завершению URL страница не найдена</p>
+    <h3>404 ошибка - что это такое?</h3>
+    <p> По запрашиваемому страница URL не найдена</p>
 
 </article>
-<?php $content = ob_get_clean();    ?>
+<?php $content = ob_get_clean(); ?>
+
 <?php include "viewAdmin/templates/layout.php";

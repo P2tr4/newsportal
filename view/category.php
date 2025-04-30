@@ -8,6 +8,4 @@ foreach($arr as $value) {
     <br>';
 }
 
-
-
 ?>

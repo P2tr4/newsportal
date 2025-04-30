@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'inc/db.php';
+include_once 'inc/Database.php';
 require 'model/Category.php';
 require 'model/News.php';
 require 'model/Comments.php';

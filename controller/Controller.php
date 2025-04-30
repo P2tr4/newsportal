@@ -52,6 +52,7 @@ class Controller {
     }
 
 
+    //-----------------------------------РЕГИСТРАЦИЯ
     public static function registerForm()
     {
         include_once('view/formRegister.php');
