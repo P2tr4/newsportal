@@ -4,15 +4,14 @@
         <link href="public/css/bootstrap.css" rel="stylesheet">
         <link href="public/css/mystyle.css" rel="stylesheet">
  <link rel="stylesheet" href="public/css/font-awesome.min.css">
-   
- <script src="public/js/jquery.min.js"></script>
+
+        <script src="public/js/jquery.min.js"></script>
         <script src="public/js/bootstrap.min.js"></script>
         <sctipt type="text/javascript" src="public/js/ajaxupload.3.5.js"></script>
     </head>
     <body>
         <div class="container">
-
-<?php
+        <?php
             if (isset($_SESSION["userId"]) && isset($_SESSION["sessionId"]))
             {
         ?>
@@ -27,10 +26,10 @@
 
                         if(isset($_SESSION["status"]) && $_SESSION["status"]=="admin") {
                             
-                            echo '<h4><a href="../" target=_blank>WEB SITE </a>';
-                            echo ' &#187 <a href="categoryAdmin">Categories </a>';
-                            echo ' &#187 <a href="newsAdmin">NewsList </a>';
-
+                            echo '<h4><a href="../" target=_blank>Web Site News portal</a>';
+                            echo ' &#187 <a href="./">Start admin</a>';
+                            echo ' &#187 <a href="categoryAdmin">News categories </a>';
+                            echo ' &#187 <a href="newsAdmin">News List</a>';
                             echo ' </h4>';
                         } else {
                             echo '<h4> У вас нет прав!</h4>';

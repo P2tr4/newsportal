@@ -1,9 +1,14 @@
 <?php
 session_start();
-    require_once '../inc/db.php';
-    require_once ("modelAdmin/modelAdmin.php");
-    require_once ("controllerAdmin/controllerAdmin.php");
+//session_destroy();
+require_once ('../inc/db.php'); //База данных
 
-    include('routeAdmin/routingAdmin.php');//!!!!
+include_once ("modelAdmin/modelAdmin.php");
+include_once ("modelAdmin/modelAdminNews.php");
 
-    echo $response;
+include_once ("controllerAdmin/controllerAdmin.php");
+include_once ("controllerAdmin/controllerAdminNews.php");
+
+include('routeAdmin/routingAdmin.php'); //!!!!
+
+echo $response;
